@@ -1,297 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- --------- UNICONS ---------- -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <!-- UNICONS -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
 
-    <!-- --------- CSS ---------- -->
-    <link rel="stylesheet" href="assets/css/style.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 
-    <!-- --------- FAVICON ---------- -->
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
 
-    <title>Pola Sandeep Reddy</title>
+  <title>Pola Sandeep Reddy</title>
+
+  <style>
+    .completed-projects-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 20px;
+    }
+
+    .completed-project {
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #completed-projects {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-   <div class="container">
-    <!-- --------------- HEADER --------------- -->
-      <nav id="header">
-        <div class="nav-logo">
-            <p class="nav-name">PSR</p>
-            <span>.</span>
-        </div>
-        <div class="nav-menu" id="myNavMenu">
-            <ul class="nav_menu_list">
-                <li class="nav_list">
-                    <a href="#home" class="nav-link active-link">Home</a>
-                    <div class="circle"></div>
-                </li>
-                <li class="nav_list">
-                    <a href="#about" class="nav-link">About</a>
-                    <div class="circle"></div>
-                </li>
-                <li class="nav_list">
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <div class="circle"></div>
-                </li>
-                <li class="nav_list">
-                    <a href="#contact" class="nav-link">Contact</a>
-                    <div class="circle"></div>
-                </li>
-            </ul>
-        </div>
-        <div class="nav-button">
-            <a href="https://drive.google.com/file/d/1hA-jF1a3umyFYC831S2mp-KueOWsTkOA/view?usp=sharing" download>
-                <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
-            </a>
-        </div>
-        
-        <div class="nav-menu-btn">
-            <i class="uil uil-bars" onclick="myMenuFunction()"></i>
-        </div>
-      </nav>
+  <div class="container">
+    <!-- HEADER -->
+    <nav id="header">
+      <div class="nav-logo">
+        <p class="nav-name" style="font-size: 24px" >PSR</p>
+      </div>
+      <div class="nav-menu" id="myNavMenu">
+        <ul class="nav_menu_list">
+          <li class="nav_list"><a href="#home" class="nav-link active-link">Home</a><div class="circle"></div></li>
+          <li class="nav_list"><a href="#about" class="nav-link">About</a><div class="circle"></div></li>
+          <li class="nav_list"><a href="#projects" class="nav-link">Projects</a><div class="circle"></div></li>
+          <li class="nav_list"><a href="#contact" class="nav-link">Contact</a><div class="circle"></div></li>
+        </ul>
+      </div>
+      <div class="nav-button">
+        <a href="https://drive.google.com/file/d/1hA-jF1a3umyFYC831S2mp-KueOWsTkOA/view?usp=sharing" download>
+          <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
+        </a>
+      </div>
+      <div class="nav-menu-btn">
+        <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+      </div>
+    </nav>
 
-
-    <!-- -------------- MAIN ---------------- -->
+    <!-- MAIN -->
     <main class="wrapper">
-       <!-- -------------- FEATURED BOX ---------------- -->
-       <section class="featured-box" id="home">
-          <div class="featured-text">
-            <div class="featured-text-card">
-                <span>POLA SANDEEP REDDY</span>
-            </div>
-            <div class="featured-name">
-                <p>I'm <span class="typedText"></span></p>
-            </div>
-            <div class="featured-text-info">
-                <p>Experienced <b>Full-Stack Developer</b> with a passion for creating dynamic and efficient web 
-                    applications using Python and Django. Skilled in developing both frontend interfaces and
-                    robust backend systems.
-                   
-                </p>
-            </div>
-            <div class="featured-text-btn">
-                <button class="btn blue-btn">Hire Me</button>
-                <a href="https://drive.google.com/file/d/1hA-jF1a3umyFYC831S2mp-KueOWsTkOA/view?usp=sharing" download>
-                    <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
-                </a>
-            </div>
-            
-            <div class="social_icons">
-                <div class="icon">
-                    <a href="https://www.linkedin.com/in/pola-sandeep-reddy-53b26b282/" target="_blank">
-                        <i class="uil uil-linkedin-alt"></i>
-                    </a>
-                </div>
-                <div class="icon">
-                    <a href="https://github.com/polasandeepreddy" target="_blank">
-                        <i class="uil uil-github-alt"></i>
-                    </a>
-                </div>
-                <div class="icon">
-                    <a href="https://www.instagram.com/your_instagram_username" target="_blank">
-                        <i class="uil uil-instagram"></i>
-                    </a>
-                </div>
-                <div class="icon">
-                    <a href="http://mnrct.com/" target="_blank" rel="noopener noreferrer">
-                        <i class="uil uil-globe"></i> <!-- Use uil version for consistency -->
-                    </a>
-                </div>
-            </div>
-            
+      <!-- FEATURED BOX -->
+      <section class="featured-box" id="home">
+        <div class="featured-text">
+          <div class="featured-text-card">
+            <span>POLA SANDEEP REDDY</span>
           </div>
-          <div class="featured-image">
-            <div class="image">
-                <img src="assets/images/avatar.png" alt="avatar">
-            </div>
+          <div class="featured-name">
+            <p>I'm <span class="typedText"></span></p>
           </div>
-          <div class="scroll-icon-box">
-            <a href="#about" class="scroll-btn">
-                <i class="uil uil-mouse-alt"></i>
-                <p>Scroll Down</p>
+          <div class="featured-text-info">
+            <p>
+              Experienced <b>Full-Stack Developer</b> with a passion for creating dynamic and efficient web
+              applications using Python and Django. Skilled in developing both frontend interfaces and robust backend systems.
+            </p>
+          </div>
+          <div class="featured-text-btn">
+            <button class="btn blue-btn">Hire Me</button>
+            <a href="https://drive.google.com/file/d/1hA-jF1a3umyFYC831S2mp-KueOWsTkOA/view?usp=sharing" download>
+              <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
             </a>
           </div>
-
-       </section>
-       <!-- -------------- ABOUT BOX ---------------- -->
-       <section class="section" id="about">
-          <div class="top-header">
-            <h1>About Me</h1>
+          <div class="social_icons">
+            <div class="icon"><a href="https://www.linkedin.com/in/pola-sandeep-reddy-53b26b282/" target="_blank"><i class="uil uil-linkedin-alt"></i></a></div>
+            <div class="icon"><a href="https://github.com/polasandeepreddy" target="_blank"><i class="uil uil-github-alt"></i></a></div>
+            <div class="icon"><a href="https://www.instagram.com/your_instagram_username" target="_blank"><i class="uil uil-instagram"></i></a></div>
+            <div class="icon"><a href="http://mnrct.com/" target="_blank"><i class="uil uil-globe"></i></a></div>
           </div>
-          <div class="row">
-            <div class="col">
-                <div class="about-info">
-                    <h3>My introduction</h3>
-                    <p>I am Sandeep Reddy, a Full-Stack Developer with experience in building dynamic 
-                        websites. With expertise in both front-end and back-end technologies, I focus on 
-                        creating responsive and interactive web applications that deliver seamless user 
-                        experiences and robust functionality.
-                    </p>
-                    <div class="about-btn">
-                        <a href="https://drive.google.com/file/d/1hA-jF1a3umyFYC831S2mp-KueOWsTkOA/view?usp=sharing" download>
-                            <button class="btn">Download CV <i class="uil uil-import"></i></button>
-                        </a>
-                    </div>                    
-                </div>
-            </div>
-            <div class="col">
-                <div class="skills-box">
-                    <div class="skills-header">
-                        <h3>Frontend</h3>
-                    </div>
-                    <div class="skills-list">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>Bootstrap</span>
-                        <span>JavaScript</span>
-                    </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skills-header">
-                        <h3>Backend</h3>
-                    </div>
-                    <div class="skills-list">
-                        <span>Python</span>
-                        <span>Django</span>
-                    </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skills-header">
-                        <h3>Database</h3>
-                    </div>
-                    <div class="skills-list">
-                        <span>MySQL</span>
-                        <span>Oracle</span>
-                    </div>
-                </div>
+        </div>
+        <div class="featured-image">
+          <div class="image"><img src="assets/images/avatar.png" alt="avatar" /></div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section" id="about">
+        <div class="top-header"><h1>About Me</h1></div>
+        <div class="row">
+          <div class="col">
+            <div class="about-info">
+              <h3>My introduction</h3>
+              <p>
+                I am Sandeep Reddy, a Full-Stack Developer with experience in building dynamic websites. With expertise in both front-end and back-end technologies, I focus on creating responsive and interactive web applications that deliver seamless user experiences and robust functionality.
+              </p>
+              <div class="about-btn">
+                <a href="https://drive.google.com/file/d/1hA-jF1a3umyFYC831S2mp-KueOWsTkOA/view?usp=sharing" download>
+                  <button class="btn">Download CV <i class="uil uil-import"></i></button>
+                </a>
+              </div>
             </div>
           </div>
-       </section>
-
-       <!-- -------------- PROJECT BOX ---------------- -->
-
-       <section class="section" id="projects">
-          <div class="top-header">
-              <h1>Projects</h1>
-          </div>
-          <div class="project-container">
-            <div class="project-box">
-                <i class="uil uil-briefcase-alt"></i>
-                <h3>Completed</h3>
-                <label>2 Finished Projects</label>
+          <div class="col">
+            <div class="skills-box">
+              <div class="skills-header"><h3>Frontend</h3></div>
+              <div class="skills-list"><span>HTML</span><span>CSS</span><span>Bootstrap</span><span>JavaScript</span></div>
             </div>
-            <div class="project-box">
-                <i class="uil uil-users-alt"></i>
-                <h3>Clients</h3>
-                <label>5+ Happy Clients</label>
+            <div class="skills-box">
+              <div class="skills-header"><h3>Backend</h3></div>
+              <div class="skills-list"><span>Python</span><span>Django</span><span>React</span></div>
             </div>
-            <div class="project-box">
-                <i class="uil uil-award"></i>
-                <h3>Experience</h3>
-                <label>1+ Years in the field</label>
+            <div class="skills-box">
+              <div class="skills-header"><h3>Database</h3></div>
+              <div class="skills-list"><span>MySQL</span><span>Oracle</span></div>
             </div>
           </div>
-       </section>
+        </div>
+      </section>
 
-       <!-- -------------- CONTACT BOX ---------------- -->
-
-       <section class="section" id="contact">
-          <div class="top-header">
-            <h1>Get in touch</h1>
+      <!-- PROJECTS -->
+      <section class="section" id="projects">
+        <div class="top-header"><h1>Projects</h1></div>
+        <div class="project-container">
+          <div class="project-box" id="completedBox">
+            <i class="uil uil-briefcase-alt"></i>
+            <h3>Completed</h3>
+            <label>2 Finished Projects</label>
           </div>
-          <div class="row">
-             <div class="col">
-                <div class="contact-info">
-                    <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
-                    <p><i class="uil uil-envelope"></i> Email: mr.polasandeepreddy@gmail.com</p>
-                    <p><i class="uil uil-phone"></i> Tel: +91 7286997507</p>
-                </div>
-             </div>
-             <div class="col">
-                <div class="form-control">
-                    <div class="form-inputs">
-                        <input type="text" class="input-field" placeholder="Name">
-                        <input type="text" class="input-field" placeholder="Email">
-                    </div>
-                    <div class="text-area">
-                        <textarea placeholder="Message"></textarea>
-                    </div>
-                    <div class="form-button">
-                        <button class="btn">Send <i class="uil uil-message"></i></button>
-                    </div>
-                </div>
-             </div>
+          <div class="project-box">
+            <i class="uil uil-users-alt"></i>
+            <h3>Clients</h3>
+            <label>5+ Happy Clients</label>
           </div>
-       </section>
+          <div class="project-box">
+            <i class="uil uil-award"></i>
+            <h3>Experience</h3>
+            <label>1+ Years in the field</label>
+          </div>
+        </div>
+      </section>
 
+<section class="section" id="completed-projects">
+  <div class="top-header"><h2>Completed Projects</h2></div>
+  <div class="card-container">
+    <div class="card">
+      <img src="/images/Slot booking website.jpg" alt="Slot Booking">
+      <div class="container">
+        <h4><b>Slot Booking Website</b></h4>
+        <p>Cricket turf slot booking with React, Django & UPI.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200?text=Valuation+System" alt="Valuation System">
+      <div class="container">
+        <h4><b>Property Valuation System</b></h4>
+        <p>Django app with multi-model forms and PDF export.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200?text=Doc+Processor" alt="Document Processor">
+      <div class="container">
+        <h4><b>Document Processing System</b></h4>
+        <p>Role-based flow built with Next.js and Supabase.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200?text=Bank+Auction" alt="Bank Auction">
+      <div class="container">
+        <h4><b>Bank Auction Platform</b></h4>
+        <p>Search, filter, export Excel & PDF using Django.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200?text=Report+Generator" alt="Report Generator">
+      <div class="container">
+        <h4><b>Valuation Report Generator</b></h4>
+        <p>PDF generator from property data via Django forms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <div class="top-header"><h1>Get in touch</h1></div>
+        <div class="row">
+          <div class="col">
+            <div class="contact-info">
+              <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+              <p><i class="uil uil-envelope"></i> Email: mr.polasandeepreddy@gmail.com</p>
+              <p><i class="uil uil-phone"></i> Tel: +91 7286997507</p>
+            </div>
+          </div>
+          <div class="col">
+            <form action="https://formspree.io/f/xwpolzro" method="POST" class="form-control">
+              <div class="form-inputs">
+                <input type="text" name="name" class="input-field" placeholder="Name" required />
+                <input type="email" name="email" class="input-field" placeholder="Email" required />
+              </div>
+              <div class="text-area">
+                <textarea name="message" placeholder="Message" required></textarea>
+              </div>
+              <div class="form-button">
+                <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
-
-    <!-- --------------- FOOTER --------------- -->
+    <!-- FOOTER -->
     <footer>
-        <div class="top-footer">
-            <p>Pola Sandeep Reddy .</p>
-        </div>
-        <div class="middle-footer">
-            <ul class="footer-menu">
-                <li class="footer_menu_list">
-                    <a href="#home">Home</a>
-                </li>
-                <li class="footer_menu_list">
-                    <a href="#about">About</a>
-                </li>
-                <li class="footer_menu_list">
-                    <a href="#projects">Projects</a>
-                </li>
-                <li class="footer_menu_list">
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <div class="footer-social-icons">
-            <div class="icon">
-                <a href="https://www.linkedin.com/in/pola-sandeep-reddy-53b26b282/" target="_blank" rel="noopener noreferrer">
-                    <i class="uil uil-linkedin-alt"></i>
-                </a>
-            </div>
-            <div class="icon">
-                <a href="https://github.com/polasandeepreddy" target="_blank" rel="noopener noreferrer">
-                    <i class="uil uil-github-alt"></i>
-                </a>
-            </div>
-            <div class="icon">
-                <a href="https://www.instagram.com/polasandeepreddy" target="_blank" rel="noopener noreferrer">
-                    <i class="uil uil-instagram"></i>
-                </a>
-            </div>
-            <div class="icon">
-                <a href="http://mnrct.com/" target="_blank" rel="noopener noreferrer">
-                    <i class="uil uil-globe"></i> <!-- Use uil version for consistency -->
-                </a>
-            </div>
-        </div>
-        
-        <div class="bottom-footer">
-            <p>Copyright &copy; <a href="#home" style="text-decoration: none;">POLA SANDEEP REDDY</a> - All rights reserved</p>
-        </div>
+      <div class="top-footer"><p>Pola Sandeep Reddy .</p></div>
+      <div class="middle-footer">
+        <ul class="footer-menu">
+          <li class="footer_menu_list"><a href="#home">Home</a></li>
+          <li class="footer_menu_list"><a href="#about">About</a></li>
+          <li class="footer_menu_list"><a href="#projects">Projects</a></li>
+          <li class="footer_menu_list"><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social-icons">
+        <div class="icon"><a href="https://www.linkedin.com/in/pola-sandeep-reddy-53b26b282/" target="_blank"><i class="uil uil-linkedin-alt"></i></a></div>
+        <div class="icon"><a href="https://github.com/polasandeepreddy" target="_blank"><i class="uil uil-github-alt"></i></a></div>
+        <div class="icon"><a href="https://www.instagram.com/polasandeepreddy" target="_blank"><i class="uil uil-instagram"></i></a></div>
+        <div class="icon"><a href="http://mnrct.com/" target="_blank"><i class="uil uil-globe"></i></a></div>
+      </div>
+      <div class="bottom-footer">
+        <p>&copy; <a href="#home" style="text-decoration: none;">POLA SANDEEP REDDY</a> - All rights reserved</p>
+      </div>
     </footer>
+  </div>
 
-    </div>
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="assets/js/main.js"></script>
 
+  <!-- TOGGLE PROJECTS SECTION -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const completedBox = document.getElementById("completedBox");
+      const completedSection = document.getElementById("completed-projects");
 
-
-
-    <!-- ----- TYPING JS Link ----- -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
-       <!-- ----- SCROLL REVEAL JS Link----- -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!-- ----- MAIN JS ----- -->
-    <script src="assets/js/main.js"></script>
+      completedBox.addEventListener("click", () => {
+        if (completedSection.style.display === "none" || completedSection.style.display === "") {
+          completedSection.style.display = "block";
+          completedSection.scrollIntoView({ behavior: "smooth" });
+        } else {
+          completedSection.style.display = "none";
+        }
+      });
+    });
+  </script>
 </body>
 </html>
