@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Completed Projects - Pola Sandeep Reddy</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+      overflow: hidden;
+      background: #fff;
+      text-align: center;
+      padding-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    /* Image wrapper to position badge */
+    .img-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+    }
+
+    .img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Percentage badge on image bottom right */
+    .completion-percentage {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background-color: rgba(0, 123, 255, 0.85);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 6px rgba(0, 123, 255, 0.5);
+      user-select: none;
+      pointer-events: none;
+      backdrop-filter: brightness(0.8);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card h4 {
+      margin: 15px 0 10px;
+      color: #222;
+      font-size: 1.3rem;
+    }
+    .card p {
+      padding: 0 20px;
+      font-size: 1rem;
+      color: #555;
+      flex-grow: 1;
+    }
+    .visit-btn {
+      display: block;
+      width: 80%;
+      max-width: 220px;
+      margin: 15px auto 0;
+      padding: 10px 0;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      text-align: center;
+      transition: background-color 0.3s ease;
+      z-index: 1;
+      position: relative;
+    }
+    .visit-btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Centered Back to Home button */
+    .back-link {
+      display: block;
+      margin: 40px auto 0;
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+      font-size: 1.1rem;
+      width: max-content;
+      text-align: center;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Projects</h1>
+  <div class="card-container">
+    <div class="card">
+      <div class="img-wrapper">
+        <img src="assets/images/Properties webste image.jpg" alt="Bank Auction" />
+        <span class="completion-percentage">95%</span>
+      </div>
+      <h4>Bank Auction Platform</h4>
+      <p>Search, filter, export Excel & PDF using Django.</p>
+      <a href="http://mnrct.com/" target="_blank" class="visit-btn" rel="noopener noreferrer">Visit Site</a>
+    </div>
+    <div class="card">
+      <div class="img-wrapper">
+        <img src="assets/images/Slot booking website.jpg" alt="Slot Booking" />
+        <span class="completion-percentage">70%</span>
+      </div>
+      <h4>Slot Booking Website</h4>
+      <p>Cricket turf slot booking with React, Django & UPI.</p>
+      <a href="https://sixers-cafe.pages.dev/" target="_blank" class="visit-btn" rel="noopener noreferrer">Visit Site</a>
+    </div>
+    <div class="card">
+      <div class="img-wrapper">
+        <img src="https://via.placeholder.com/400x200?text=Valuation+System" alt="Valuation System" />
+        <span class="completion-percentage">30%</span>
+      </div>
+      <h4>Property Valuation System</h4>
+      <p>Django app with multi-model forms and PDF export.</p>
+      <a href="https://your-valuation-system-site.com" target="_blank" class="visit-btn" rel="noopener noreferrer">Visit Site</a>
+    </div>
+  </div>
+
+  <a href="index.html" class="back-link">&larr; Back to Home</a>
+
+  <script>
+    document.querySelectorAll('.completion-percentage').forEach(span => {
+      const text = span.textContent.trim();
+      const percent = parseInt(text.replace('%', ''), 10);
+
+      if (percent >= 80) {
+        span.style.backgroundColor = 'rgba(40, 167, 69, 0.85)'; // green
+        span.style.boxShadow = '0 2px 6px rgba(40, 167, 69, 0.5)';
+      } else if (percent >= 50) {
+        span.style.backgroundColor = 'rgba(255, 193, 7, 0.85)'; // yellow
+        span.style.boxShadow = '0 2px 6px rgba(255, 193, 7, 0.5)';
+      } else {
+        span.style.backgroundColor = 'rgba(220, 53, 69, 0.85)'; // red
+        span.style.boxShadow = '0 2px 6px rgba(220, 53, 69, 0.5)';
+      }
+    });
+  </script>
+</body>
+</html>
